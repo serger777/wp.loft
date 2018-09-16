@@ -19,4 +19,4 @@ web/.htaccess
 vendor/*
 !vendor/.gitkeep
 
-.idea/*
+.idea
