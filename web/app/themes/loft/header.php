@@ -30,28 +30,32 @@
                         ?>
                     </ul>
 
-                    <nav class="main-navigation">
-                        <ul class="nav-list">
-                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Главная</a>
-                            </li>
-                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Полезная
-                                    информация</a></li>
-                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Последние
-                                    акции</a></li>
-                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">О
-                                    сервисе</a></li>
-                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Новости</a>
-                            </li>
-                        </ul>
-                    </nav>
+<!--                    <nav class="main-navigation">-->
+<!--                        <ul class="nav-list">-->
+<!--                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Главная</a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Полезная-->
+<!--                                    информация</a></li>-->
+<!--                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Последние-->
+<!--                                    акции</a></li>-->
+<!--                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">О-->
+<!--                                    сервисе</a></li>-->
+<!--                            <li class="nav-list__nav-item"><a href="#" class="nav-list__nav-item__nav-link">Новости</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </nav>-->
             </div>
         </div>
         <div class="bottom-header">
             <div class="search-form-wrap">
-                <form class="search-form">
-                    <input type="text" placeholder="Поиск..." class="search-form__input">
-                    <button class="search-form__btn-search"><i class="icon icon-search"></i></button>
+                <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <label>
+                        <span class="screen-reader-text"><?php echo _x( '', 'label', 'loft' ); ?></span>
+                        <input type="search" class="search-form__input" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'loft' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                    </label>
+                    <button type="submit" class="search-form__btn-search"><span class="screen-reader-text"><?php echo _x( '', 'submit button', 'loft' ); ?></span><i class="icon icon-search"></i></button>
                 </form>
+
             </div>
         </div>
     </header>

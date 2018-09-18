@@ -32,7 +32,7 @@
                     echo '<li class="category-list__item"> <a class="category-list__item__link" href="' . get_category_link($category->term_id) . '" title="' . sprintf(__("View all posts in %s"),
                             $category->name) . '" ' . '>' . $category->name . '</a>  ';
                     echo '<ul class="category-list__inner">';
-                    # получаем дочерние рубрики
+
                     $parent_id = $category->term_id;
                     $sub_cats = get_categories(array(
                         'child_of' => $parent_id,
@@ -48,6 +48,12 @@
                 }
                 ?>
         </div>
+    </div>
+    <div class="sidebar__sidebar-item">
+        <div class="sidebar-item__title">Новости месяца</div>
+        <ul class="category-list">
+            <?php get_calendar(); ?>
+        </ul>
     </div>
     <div class="field">
         <? the_field('описание');?>

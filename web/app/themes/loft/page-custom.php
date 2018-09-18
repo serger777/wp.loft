@@ -52,6 +52,8 @@
 
 
         </div>
+       <? wp_reset_query();
+        wp_reset_postdata();?>
         <!-- sidebar-->
         <?php get_sidebar(); ?>
     </div>

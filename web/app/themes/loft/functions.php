@@ -1,10 +1,11 @@
 <?php
 add_theme_support('menus');
+add_theme_support( 'post-thumbnails' );
 add_filter('nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10, 4);
 
 function custom_nav_menu_link_attributes($atts, $item, $args, $depth)
 {
-    if ($args->menu->slug == 'menus' && $item->ID == 1) {
+    if ($args->menu->slug == 'header_menu' && $item->ID == 1) {
 
         $class = "button";
 
